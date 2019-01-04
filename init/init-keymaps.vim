@@ -325,6 +325,7 @@ elseif has('win32') || has('win64')
 else
 	noremap <silent><F2> :AsyncRun! -cwd=<root> grep -n -s -R <C-R><C-W> 
 				\ --include='*.h' --include='*.c*' --include='*.py' 
+				\ --include='*.go' --include='*.rs'
 				\ --include='*.js' --include='*.vim'
 				\ '<root>' <cr>
 endif

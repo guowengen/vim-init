@@ -641,12 +641,9 @@ end
 
 if index(g:bundle_group, 'language') >= 0
 	Plug 'vim-scripts/nginx.vim'
-	Plug 'fatih/vim-go'
 
-	" python自动补全
-	"Plug 'klen/python-mode'
-	
-	"let g:pymode_python = 'python3'
+	" golang 支持
+	Plug 'fatih/vim-go'
 	
 	" rust 
 	Plug 'racer-rust/vim-racer'
@@ -656,8 +653,10 @@ if index(g:bundle_group, 'language') >= 0
 
 	"" 手动补全和定义跳转
 	set hidden
+	
 	"" 这一行指的是你编译出来的racer所在的路径
 	let g:racer_cmd = "/root/.cargo"
+	
 	"" 源码目录
 	let $RUST_SRC_PATH="/home/env/rustc-1.30.0-src/src/"
 end
