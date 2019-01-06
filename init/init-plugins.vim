@@ -16,7 +16,7 @@
 if !exists('g:bundle_group')
 	let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'textobj']
 	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
-	let g:bundle_group += ['leaderf', 'youcompleteme', 'clangformat', 'language']
+	let g:bundle_group += ['leaderf', 'youcompleteme', 'format', 'language']
 endif
 
 
@@ -625,18 +625,15 @@ endif
 
 
 "----------------------------------------------------------------------
-" clang-format：代码格式化
+" format：代码格式化
 "----------------------------------------------------------------------
-if index(g:bundle_group, 'clangformat') >= 0
-	Plug 'rhysd/vim-clang-format'
-	
-	let g:clang_format#auto_format=1
-	let g:clang_format#style_options = {
-	            \ "AccessModifierOffset" : -4,
-	            \ "AllowShortIfStatementsOnASingleLine" : "true",
-	            \ "AlwaysBreakTemplateDeclarations" : "true",
-	            \ "Standard" : "C++11"}	
+if index(g:bundle_group, 'format') >= 0
+	Plug 'Chiel92/vim-autoformat'
 
+	" F12 格式化
+	nmap <F12> :Autoformat<cr>
+	let g:formatdef_harttle = '"astyle --style=allman --pad-oper"'
+	let g:formatters_cpp = ['harttle']
 end
 
 if index(g:bundle_group, 'language') >= 0
