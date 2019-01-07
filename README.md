@@ -33,7 +33,7 @@ source ~/.vim/vim-init/init.vim
 
 请调整你的终端软件，确保对 ALT 键的支持，以及 Backspace 键发送正确扫描码：
 
-[终端软件下正确支持 ALT 键和 Backspace 键](https://github.com/guowengen/vim-init/wiki/Setup-terminals-to-support-ALT-and-Backspace-correctly)
+[终端软件下正确支持 ALT 键和 Backspace 键](https://github.com/skywind3000/vim-init/wiki/Setup-terminals-to-support-ALT-and-Backspace-correctly)
 
 然后启动 Vim，在命令行运行 `:PlugInstall` 安装依赖插件即可。
 
