@@ -634,7 +634,7 @@ if index(g:bundle_group, 'format') >= 0
 
 	" F12 格式化
 	nmap <F12> :Autoformat<cr>
-	let g:formatdef_harttle = '"astyle --style=allman --pad-oper"'
+	let g:formatdef_harttle = '"astyle --style=google --pad-oper"'
 	let g:formatters_cpp = ['harttle']
 end
 
