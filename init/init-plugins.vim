@@ -634,7 +634,7 @@ if index(g:bundle_group, 'format') >= 0
 
 	" F12 格式化
 	nmap <F12> :Autoformat<cr>
-	let g:formatdef_harttle = '"astyle --style=allman --pad-oper --indent-switches"'
+	let g:formatdef_harttle = '"astyle --style=allman --pad-oper --indent-switches --indent-classes --indent-namespaces"'
 	let g:formatters_cpp = ['harttle']
 end
 
